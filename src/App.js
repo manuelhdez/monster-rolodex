@@ -17,9 +17,7 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    fetch(
-      "https://cors-anywhere.herokuapp.com/https://jsonplaceholder.typicode.com/users"
-    )
+    fetch("https://jsonplaceholder.typicode.com/users", { mode: "no-cors" })
       .then(response => response.json())
       .then(users => {
         console.log(users);

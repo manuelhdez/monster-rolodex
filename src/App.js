@@ -17,12 +17,9 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    fetch("https://jsonplaceholder.typicode.com/users", { mode: "no-cors" })
+    fetch("https://jsonplaceholder.typicode.com/users")
       .then(response => response.json())
-      .then(users => {
-        console.log(users);
-        this.setState({ monsters: users });
-      });
+      .then(users => this.setState({ monsters: users }));
   }
 
   // handleChange(e) {
